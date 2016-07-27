@@ -36,13 +36,13 @@
     <script id="repo-template" type="text/x-handlebars-template">
       <li>
         <a href="{{html_url}}" target="_blank"><h3>{{name}}</h3></a>
-        <!-- TODO: fill in these  expressions... -->
-        <p>Description: {{}}</p>
-        <p>Primary Language: {{}}</p>
-        <p>Created: {{}}</p>
-        <p>Last Updated: {{}}</p>
+        <!-- DONE: fill in these  expressions... -->
+        <p>Description: {{description}}</p>
+        <p>Primary Language: {{language}}</p>
+        <p>Created: {{created_at}}</p>
+        <p>Last Updated: {{updated_at}}</p>
         {{#if watchers_count}}
-          <p>{{}} watching this repo</p>
+          <p>{{watchers_count}} watching this repo</p>
         {{/if}}
       </li>
     </script>
@@ -113,29 +113,30 @@
       &copy; 2016 Code Fellows | Static Blog | Happy Ipsum!
     </footer>
     <!-- Vendor files: -->
-    <script src="/vendor/scripts/jquery-2.1.4.js"></script>
-    <script src="/vendor/scripts/handlebars.js"></script>
-    <script src="/vendor/scripts/marked.js"></script>
-    <script src="/vendor/scripts/html5sql.js"></script>
-    <script src="/vendor/scripts/webdb.js"></script>
-    <script src="/vendor/scripts/page.js"></script>
+    <script src="vendor/scripts/jquery-2.1.4.js"></script>
+    <script src="vendor/scripts/handlebars.js"></script>
+    <script src="vendor/scripts/marked.js"></script>
+    <script src="vendor/scripts/html5sql.js"></script>
+    <script src="vendor/scripts/webdb.js"></script>
+    <script src="vendor/scripts/page.js"></script>
 
-    <!-- TODO: Include your secret GitHub token file, which should be gitingore'd,
+    <!-- Done-Corey: Include your secret GitHub token file, which should be gitingore'd,
       therefore recreated in every developer's environment. -->
-
+    <script src="scripts/assets/githubToken.js"></script>
     <!-- Model files: -->
-    <!-- TODO: Be sure to include any new model files: -->
-    <script src="/scripts/models/article.js"></script>
+    <!-- Done-Corey: Be sure to include any new model files: -->
+    <script src="scripts/models/article.js"></script>
+    <script src="scripts/models/repo.js"></script>
 
     <!-- View files: -->
-    <!-- TODO: Be sure to include any new view files: -->
-    <script src="/scripts/views/articleView.js"></script>
-    <script src="/scripts/views/adminView.js"></script>
-
+    <!-- Done-Corey: Be sure to include any new view files: -->
+    <script src="scripts/views/articleView.js"></script>
+    <script src="scripts/views/adminView.js"></script>
+    <script src="scripts/views/repoView.js"></script>
     <!-- Controller files: -->
-    <script src="/scripts/controllers/articleController.js"></script>
-    <script src="/scripts/controllers/aboutController.js"></script>
-    <script src="/scripts/controllers/adminController.js"></script>
-    <script src="/scripts/controllers/routes.js"></script>
+    <script src="scripts/controllers/articleController.js"></script>
+    <script src="scripts/controllers/aboutController.js"></script>
+    <script src="scripts/controllers/adminController.js"></script>
+    <script src="scripts/controllers/routes.js"></script>
   </body>
 </html>
